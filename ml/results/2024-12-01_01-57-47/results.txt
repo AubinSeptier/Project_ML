@@ -1,0 +1,24 @@
+Super Model
+Best params: {'final_estimator__C': 1, 'final_estimator__penalty': None, 'final_estimator__solver': 'lbfgs'}
+Best validation score: 0.7217863725721146
+Best model saved at: ./results\2024-12-01_01-57-47\super_model.joblib
+Model Metrics: 
+Accuracy: 0.7199460714553217
+F1 Score: 0.6928952772073922
+Cohen Kappa Score: 0.43805750356354367
+Confusion Matrix:
+ [[5394 1422]
+ [2317 4218]]
+Classification Report:
+               precision    recall  f1-score   support
+
+           0       0.70      0.79      0.74      6816
+           1       0.75      0.65      0.69      6535
+
+    accuracy                           0.72     13351
+   macro avg       0.72      0.72      0.72     13351
+weighted avg       0.72      0.72      0.72     13351
+
+R2 : -0.1207121683172232
+MAE : 0.2800539285446783
+ROC AUC Score: 0.7881943696096497
