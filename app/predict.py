@@ -9,7 +9,6 @@ class Predictor:
         
     def predict(self, values: dict):
         data = pd.DataFrame(values, index=[0])
-        print("Input data before transformation:", data)
         data["BMI"] = data["weight"] / (data["height"]/100)**2
         data = data.drop(columns=["height", "weight"])
         prediction = self.model.predict(data)

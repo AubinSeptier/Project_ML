@@ -145,18 +145,15 @@ class App(ctk.CTk):
         
         predictor = Predictor(model)
         prediction, proba = predictor.predict(values)
-        print(prediction)
-        print(proba)
         
-        if prediction == 0:
+        if prediction[0] == 0:
             text = "No Heart Disease Detected (probability: {:.2f})".format(proba[0][0])
             self.predictionLabel.configure(text=text, text_color="green")
-            print("Updated")
         else:
             text = "Heart Disease Detected (probability: {:.2f})".format(proba[0][1])
             self.predictionLabel.configure(text=text, text_color="red")
-            print("Updated")
         
+        print("Updated")
         del predictor      
         
         

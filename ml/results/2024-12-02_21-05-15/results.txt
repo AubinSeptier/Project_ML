@@ -1,0 +1,76 @@
+Multiple Model
+
+
+Model: RandomForest
+Best params: {'criterion': 'entropy', 'max_depth': 5, 'n_estimators': 10}
+Best validation score: 0.721801938825144
+Best model saved at: ./results\2024-12-02_21-05-15\RandomForest.joblib
+Model Metrics: 
+Accuracy: 0.7241405138191895
+F1 Score: 0.6975445512030878
+Cohen Kappa Score: 0.4464773679979759
+Confusion Matrix:
+ [[5421 1395]
+ [2288 4247]]
+Classification Report:
+               precision    recall  f1-score   support
+
+           0       0.70      0.80      0.75      6816
+           1       0.75      0.65      0.70      6535
+
+    accuracy                           0.72     13351
+   macro avg       0.73      0.72      0.72     13351
+weighted avg       0.73      0.72      0.72     13351
+
+MAE : 0.2758594861808104
+ROC AUC Score: 0.7896944630034736
+
+
+Model: GradientBoosting
+Best params: {'learning_rate': 0.1, 'max_depth': 3, 'n_estimators': 10}
+Best validation score: 0.7182599182081816
+Best model saved at: ./results\2024-12-02_21-05-15\GradientBoosting.joblib
+Model Metrics: 
+Accuracy: 0.7181484532993784
+F1 Score: 0.6886222589987588
+Cohen Kappa Score: 0.4342894391613129
+Confusion Matrix:
+ [[5427 1389]
+ [2374 4161]]
+Classification Report:
+               precision    recall  f1-score   support
+
+           0       0.70      0.80      0.74      6816
+           1       0.75      0.64      0.69      6535
+
+    accuracy                           0.72     13351
+   macro avg       0.72      0.72      0.72     13351
+weighted avg       0.72      0.72      0.72     13351
+
+MAE : 0.2818515467006217
+ROC AUC Score: 0.7877623109224077
+
+
+Model: CatBoost
+Best params: {'depth': 3, 'iterations': 10, 'learning_rate': 0.1}
+Best validation score: 0.7171388127120328
+Best model saved at: ./results\2024-12-02_21-05-15\CatBoost.joblib
+Model Metrics: 
+Accuracy: 0.7185978578383642
+F1 Score: 0.6895810955961332
+Cohen Kappa Score: 0.435223615429263
+Confusion Matrix:
+ [[5421 1395]
+ [2362 4173]]
+Classification Report:
+               precision    recall  f1-score   support
+
+           0       0.70      0.80      0.74      6816
+           1       0.75      0.64      0.69      6535
+
+    accuracy                           0.72     13351
+   macro avg       0.72      0.72      0.72     13351
+weighted avg       0.72      0.72      0.72     13351
+
+MAE : 0.28140214216163584
+ROC AUC Score: 0.78594951659716
