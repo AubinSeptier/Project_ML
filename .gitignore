@@ -1,5 +1,6 @@
 .venv
 __pycache__/
+app/__pycache__
 .ipynb_checkpoints
 ml/.ipynb_checkpoints
 app/__pycache__/
