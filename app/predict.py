@@ -1,7 +1,6 @@
 import joblib
 import pandas as pd
 import os
-from sklearn.preprocessing import StandardScaler
 
 class Predictor:
     def __init__(self, model: str):
@@ -10,12 +9,11 @@ class Predictor:
         
     def predict(self, values: dict):
         data = pd.DataFrame(values, index=[0])
+        print("Input data before transformation:", data)
         data["BMI"] = data["weight"] / (data["height"]/100)**2
         data = data.drop(columns=["height", "weight"])
-        sc = StandardScaler()
-        X = sc.fit_transform(data)
-        prediction = self.model.predict(X)
-        proba = self.model.predict_proba(X)
+        prediction = self.model.predict(data)
+        proba = self.model.predict_proba(data)
         return prediction, proba
     
     def load_model(self, model: str):

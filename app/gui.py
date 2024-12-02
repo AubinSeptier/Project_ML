@@ -18,7 +18,7 @@ class App(ctk.CTk):
         self.modelVar = tk.StringVar(value="Stacking")
         self.modelLabel = ctk.CTkLabel(self, text="Selected Model")
         self.modelLabel.grid(row=1, column=0, padx=10, pady=10, sticky="w")
-        self.modelChoice = ctk.CTkOptionMenu(self, values=["Random Forest", "GradientBoosting", "catBoost", "Stacking"], variable=self.modelVar)
+        self.modelChoice = ctk.CTkOptionMenu(self, values=["RandomForest", "GradientBoosting", "CatBoosting", "Stacking"], variable=self.modelVar)
         self.modelChoice.grid(row=1, column=1, padx=10, pady=10, sticky="ew")
         self.modelVar.set("Stacking")
         
@@ -134,8 +134,8 @@ class App(ctk.CTk):
             "gender": gender,
             "height": height,
             "weight": weight,
-            "systolic_bp": systolic_bp,
-            "diastolic_bp": diastolic_bp,
+            "ap_hi": systolic_bp,
+            "ap_lo": diastolic_bp,
             "cholesterol": chol,
             "gluc": gluc,
             "smoke": smoke,
@@ -145,7 +145,18 @@ class App(ctk.CTk):
         
         predictor = Predictor(model)
         prediction, proba = predictor.predict(values)
-        print(prediction, proba)
+        print(prediction)
+        print(proba)
+        
+        if prediction == 0:
+            text = "No Heart Disease Detected (probability: {:.2f})".format(proba[0][0])
+            self.predictionLabel.configure(text=text, text_color="green")
+            print("Updated")
+        else:
+            text = "Heart Disease Detected (probability: {:.2f})".format(proba[0][1])
+            self.predictionLabel.configure(text=text, text_color="red")
+            print("Updated")
+        
         del predictor
         
         
