@@ -18,7 +18,7 @@ class App(ctk.CTk):
         self.modelVar = tk.StringVar(value="Stacking")
         self.modelLabel = ctk.CTkLabel(self, text="Selected Model")
         self.modelLabel.grid(row=1, column=0, padx=10, pady=10, sticky="w")
-        self.modelChoice = ctk.CTkOptionMenu(self, values=["RandomForest", "GradientBoosting", "CatBoosting", "Stacking"], variable=self.modelVar)
+        self.modelChoice = ctk.CTkOptionMenu(self, values=["RandomForest", "GradientBoosting", "CatBoost", "Stacking"], variable=self.modelVar)
         self.modelChoice.grid(row=1, column=1, padx=10, pady=10, sticky="ew")
         self.modelVar.set("Stacking")
         
