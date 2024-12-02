@@ -157,11 +157,7 @@ class App(ctk.CTk):
             self.predictionLabel.configure(text=text, text_color="red")
             print("Updated")
         
-        del predictor
-        
-        
-        
-            
+        del predictor      
         
         
     def check_values(self, raw_age, raw_height, raw_weight, raw_systolic_bp, raw_diastolic_bp):
