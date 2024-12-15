@@ -1,0 +1,23 @@
+Super Model
+Best params: {'final_estimator__C': 0.1, 'final_estimator__penalty': 'l2', 'final_estimator__solver': 'newton-cholesky'}
+Best validation score: 0.7311543213593177
+Best model saved at: ./results\2024-12-03_18-49-26\Stacking.joblib
+Model Metrics: 
+Accuracy: 0.7306568796344843
+F1 Score: 0.7120896717373899
+Cohen Kappa Score: 0.46008726285714674
+Confusion Matrix:
+ [[5308 1508]
+ [2088 4447]]
+Classification Report:
+               precision    recall  f1-score   support
+
+           0       0.72      0.78      0.75      6816
+           1       0.75      0.68      0.71      6535
+
+    accuracy                           0.73     13351
+   macro avg       0.73      0.73      0.73     13351
+weighted avg       0.73      0.73      0.73     13351
+
+MAE : 0.26934312036551566
+ROC AUC Score: 0.7970272588733112
