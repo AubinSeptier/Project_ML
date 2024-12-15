@@ -12,6 +12,7 @@ class App(ctk.CTk):
         self.geometry("1280x720")
         ctk.set_appearance_mode("dark")
         ctk.set_default_color_theme("green")
+        self.iconbitmap("app/assets/logo_app.ico")
         self.resizable(True, True)
         self.minsize(800, 720)
         
